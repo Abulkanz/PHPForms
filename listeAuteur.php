@@ -24,10 +24,10 @@ and open the template in the editor.
         echo '<tr><th>Nom</th><th>Prénom</th><th>Actions</th></tr>';
         while ($ligne = $idRequete->fetch(PDO::FETCH_ASSOC)) {
             $idAut = $ligne['id_auteur'];
-            $consult = "<form method='POST' action='control/formConsult.php'><input type='submit' name='bConsult' value='C'><input type='hidden' name='id' value='".$idAut."'></form>";
-            $modif = "<form method='POST' action='control/formModif.php'><input type='submit' name='bModif' value='M'><input type='hidden' name='id' value='".$idAut."'></form>";
-            $suppr = "<form method='POST' action='control/formSuppr.php'><input type='submit' name='bSuppr' value='S'><input type='hidden' name='id' value='".$idAut."'></form>";
-            
+            $consult = "<form method='POST' action='control/formConsult.php'><input type='submit' name='bConsult' value='C'><input type='hidden' name='id' value='" . $idAut . "'></form>";
+            $modif = "<form method='POST' action='control/formModif.php'><input type='submit' name='bModif' value='M'><input type='hidden' name='id' value='" . $idAut . "'></form>";
+            $suppr = "<form method='POST' action='control/formSuppr.php'><input type='submit' name='bSuppr' value='S'><input type='hidden' name='id' value='" . $idAut . "'></form>";
+
             echo '<tr>' . '<td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $consult, $modif, $suppr . '</td>' . '</tr>';
         }
         echo '</table>';

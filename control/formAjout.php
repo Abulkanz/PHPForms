@@ -6,7 +6,6 @@
         <link href="css/template.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-
         <form method="POST" action="formAjout.php">
             <input type="text" placeholder="Nom de l'auteur" name="Nom">
             <input type="text" placeholder="Prénom de l'auteur" name="Prenom">

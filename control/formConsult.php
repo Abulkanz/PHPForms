@@ -27,7 +27,8 @@ and open the template in the editor.
             $idRequete = executeR($logIn, $sql);
             $ligne = $idRequete->fetch(PDO::FETCH_ASSOC);
             
-                echo '<table><tr><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $consult, $modif, $suppr . '</td></tr></table>';
+                echo '<table><tr><th>Nom</th><th>Prénom</th><th>Actions</th></tr>';
+                echo '<tr><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $consult, $modif, $suppr . '</td></tr></table>';
         }
         ?>
         <a href="../listeAuteur.php">Accueil</a>
