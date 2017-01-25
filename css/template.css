@@ -1,0 +1,33 @@
+ @keyframes example{
+                0% {background-color: white;}
+                50% {background-color: orange;}
+                100% {background-color: white;}
+            }
+            
+            a{
+                text-decoration: none;
+                font: 12px Arial lightblue;
+            }
+               
+            table{
+
+                border:1px solid black;
+                border-collapse:collapse;
+            }
+
+            th{
+                border:1px solid black;
+                border-collapse:collapse;
+                background-color:lightblue;
+            }
+
+            td{
+                border:1px solid black; 
+                border-collapse:collapse;
+            }
+
+            td:hover{
+                animation-name: example;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+            }
