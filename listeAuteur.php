@@ -16,23 +16,24 @@ and open the template in the editor.
         require_once 'include/connexion.php';
         require_once 'include/infoConnexion.php';
 
-        $min = 1500;
-        $max = 1800;
         $logIn = connexion(SERVEUR, UTILISATEUR, MOTDEPASSE, BASEDEDONNEES);
-        $sql = 'SELECT nom, prenom FROM auteur WHERE date_naissance BETWEEN ? AND ?';
-        $idRequete = executeR($logIn, $sql, array($min, $max));
+        $sql = 'SELECT * FROM auteur';
+        $idRequete = executeR($logIn, $sql);
+
         echo '<table>';
-        echo '<tr><th>Nom</th><th>Prénom</th></tr>';
+        echo '<tr><th>Nom</th><th>Prénom</th><th>Actions</th></tr>';
         while ($ligne = $idRequete->fetch(PDO::FETCH_ASSOC)) {
-            echo '<tr>' . '<td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '</tr>';
+            $idAut = $ligne['id_auteur'];
+            $consult = "<form method='POST' action='control/formConsult.php'><input type='submit' name='bConsult' value='C'><input type='hidden' name='id' value='".$idAut."'></form>";
+            $modif = "<form method='POST' action='control/formModif.php'><input type='submit' name='bModif' value='M'><input type='hidden' name='id' value='".$idAut."'></form>";
+            $suppr = "<form method='POST' action='control/formSuppr.php'><input type='submit' name='bSuppr' value='S'><input type='hidden' name='id' value='".$idAut."'></form>";
+            
+            echo '<tr>' . '<td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $consult, $modif, $suppr . '</td>' . '</tr>';
         }
         echo '</table>';
         ?>
 
-        <a href="formAjout.php">Ajouter un auteur à la liste</a>
-        <style>
-           
+        <a href="control/formAjout.php">Ajouter un auteur à la liste</a>
 
-        </style>
     </body>
 </html>

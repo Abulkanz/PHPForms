@@ -13,18 +13,21 @@
             <input type="submit" name="addAuthor" value="Ajouter un BG">
         </form>   
         <?php
-        require_once 'include/executeRequete.php';
-        require_once 'include/connexion.php';
-        require_once 'include/infoConnexion.php';
+        require_once '../include/executeRequete.php';
+        require_once '../include/connexion.php';
+        require_once '../include/infoConnexion.php';
 
         if (isset($_POST['addAuthor'])) {
             $name = $_POST['Nom'];
             $fName = $_POST['Prenom'];
             $logIn = connexion(SERVEUR, UTILISATEUR, MOTDEPASSE, BASEDEDONNEES);
-            $sql = 'INSERT INTO $bdd (nom, prenom) VALUES ($name, $fName)';
+            $sql = 'INSERT INTO auteur (nom, prenom) VALUES (?, ?)';
             $idRequete = executeR($logIn, $sql, array($name, $fName));
         }
+        
+        
         ?>
+        <a href="../listeAuteur.php">Accueil</a>
     </body>
 </html>
 

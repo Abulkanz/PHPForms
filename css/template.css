@@ -1,33 +1,50 @@
- @keyframes example{
-                0% {background-color: white;}
-                50% {background-color: orange;}
-                100% {background-color: white;}
-            }
-            
-            a{
-                text-decoration: none;
-                font: 12px Arial lightblue;
-            }
-               
-            table{
+@keyframes example{
+    0% {background-color: white;}
+    50% {background-color: orange;}
+    100% {background-color: white;}
+}
 
-                border:1px solid black;
-                border-collapse:collapse;
-            }
+@font-face{
+    font-family: Righteous, sans-serif;
+    src: url(../fonts/Righteous-Regular.ttf);
+}
 
-            th{
-                border:1px solid black;
-                border-collapse:collapse;
-                background-color:lightblue;
-            }
 
-            td{
-                border:1px solid black; 
-                border-collapse:collapse;
-            }
+a{
+    text-decoration: none;
+    font: 12px Righteous lightblue;
+}
 
-            td:hover{
-                animation-name: example;
-                animation-duration: 2s;
-                animation-timing-function: ease-in-out;
-            }
+table{
+
+    border:1px solid black;
+    border-collapse:collapse;
+}
+
+table form{
+    text-align: center;
+}
+
+table form input{
+    font: 14px Righteous black;
+    background-color: lightyellow;
+}
+
+th{
+    border:1px solid black;
+    border-collapse:collapse;
+    background-color:lightblue;
+    font: 14px Righteous black;
+}
+
+td{
+    border:1px solid black; 
+    border-collapse:collapse;
+    text-align: center;
+}
+
+td:hover{
+    animation-name: example;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
