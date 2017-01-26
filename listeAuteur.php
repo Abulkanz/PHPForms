@@ -6,6 +6,7 @@
         <link href="css/template.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        
         <header>
             <div id='banner'><h1>LISTE D'AUTEURS</h1></div>
             <br>
@@ -39,7 +40,7 @@
         }
         echo '</table>';
         ?>
-
+        
 
     </body>
 </html>
