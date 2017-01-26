@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -14,7 +9,13 @@ and open the template in the editor.
         <header>
             <div id='banner'><h1>LISTE D'AUTEURS</h1></div>
             <br>
-            <a href="control/formAjout.php">Ajouter un auteur à la liste</a>
+            <div class="menuHaut">
+                <a href="control/formAjout.php">Ajouter un auteur à la liste</a>
+                <form method="POST" action="control/formRech">
+                    <input id="cRech" type="text" name="objRech" placeholder="Rechercher">
+                    <input type="submit" name="goRech" value="->">
+                </form>
+            </div>
             <br>
         </header>
         <?php
@@ -39,6 +40,6 @@ and open the template in the editor.
         echo '</table>';
         ?>
 
-        
+
     </body>
 </html>

@@ -16,10 +16,13 @@ html{
 }
 
 body{
+    font: 1.2em Righteous;
     width: 63%;
     margin: auto;
     background: white;
+    padding-bottom: 1em;
 }
+
 
 #banner{
     width: 100%;
@@ -33,6 +36,22 @@ body{
     text-align: center;
 }
 
+#cRech{
+    display: inline-block;
+    background-color: white;
+    color: black;
+}
+.menuHaut{
+    width: 100%;
+    text-align: center;
+}
+
+.lienAcc{
+    margin: 1em auto 1em auto;
+    width: 20em;
+    text-align: center;
+}
+
 a{
     display: block;
     width: 20em;
@@ -42,6 +61,18 @@ a{
     border-radius: 1em;
     font: 1.4em Righteous;
     color: lightblue;
+}
+
+input{
+    background-color: darkgrey;
+    border-radius: 1em;
+    font: 1.4em Righteous;
+    color: lightblue;
+}
+
+input:hover{
+    background-color: lightblue;
+    color: lightgoldenrodyellow;
 }
 
 a:hover{

@@ -28,6 +28,6 @@ and open the template in the editor.
             echo '<tr><td>' . $ligne['id_auteur'] . '</td><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $ligne['date_naissance'] . '</td></tr></table>';
         }
         ?>
-        <a href="../listeAuteur.php">Accueil</a>
+        <a class='lienAcc' href="../listeAuteur.php">Accueil</a>
     </body>
 </html>

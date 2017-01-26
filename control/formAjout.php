@@ -23,8 +23,6 @@
             $sql = 'INSERT INTO auteur (nom, prenom) VALUES (?, ?)';
             $idRequete = executeR($logIn, $sql, array($name, $fName));
         }
-        
-        
         ?>
         <a href="../listeAuteur.php">Accueil</a>
     </body>
