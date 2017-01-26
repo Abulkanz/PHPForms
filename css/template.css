@@ -10,21 +10,47 @@
 }
 
 html{
-    margin: 0;
-    font-size: 16px;
+    width: 100%;
     font-size: 62.5%;
+    background: lightblue;
+}
+
+body{
+    width: 63%;
+    margin: auto;
+    background: white;
+}
+
+#banner{
+    width: 100%;
+    height: 90px;
+    background-image: url('../img/banniere.png');
 }
 
 #banner h1{
-    font: 2em Righteous black;
+    font: 2em Righteous;
+    color: white;
+    text-align: center;
 }
 
 a{
+    display: block;
+    width: 20em;
+    text-align: center;
     text-decoration: none;
-    font: 1.2em Righteous lightblue;
+    background-color: darkgrey;
+    border-radius: 1em;
+    font: 1.4em Righteous;
+    color: lightblue;
+}
+
+a:hover{
+    background-color: lightblue;
+    color: lightgoldenrodyellow;
 }
 
 table{
+    margin: auto;
     border:1px solid black;
     border-collapse:collapse;
 }
@@ -34,7 +60,7 @@ table form{
 }
 
 table form input{
-    font: 1.4em Righteous black;
+    font: 1.4em Righteous;
     background-color: lightyellow;
 }
 

@@ -13,6 +13,9 @@ and open the template in the editor.
     <body>
         <header>
             <div id='banner'><h1>LISTE D'AUTEURS</h1></div>
+            <br>
+            <a href="control/formAjout.php">Ajouter un auteur à la liste</a>
+            <br>
         </header>
         <?php
         require_once 'include/executeRequete.php';
@@ -36,7 +39,6 @@ and open the template in the editor.
         echo '</table>';
         ?>
 
-        <a href="control/formAjout.php">Ajouter un auteur à la liste</a>
-
+        
     </body>
 </html>

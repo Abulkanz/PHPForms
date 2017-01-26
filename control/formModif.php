@@ -14,8 +14,8 @@
             $id_auteur = $_POST['id'];
 
             $logIn = connexion(SERVEUR, UTILISATEUR, MOTDEPASSE, BASEDEDONNEES);
-            $sql = 'SELECT * FROM auteur WHERE id_auteur=' . $id_auteur;
-            $idRequete = executeR($logIn, $sql);
+            $sql = 'SELECT * FROM auteur WHERE id_auteur=?';
+            $idRequete = executeR($logIn, $sql, array($id_auteur));
             $ligne = $idRequete->fetch(PDO::FETCH_ASSOC);
 
             echo "<form method='post' action='formModif.php'>" .
@@ -27,6 +27,7 @@
             "<input type='submit' name='aModif' value='Annuler'>" .
             "</form>";
         
+        }
         
         if (isset($_POST['vModif'])) {
             $nom = $_POST['Nom'];
@@ -34,10 +35,14 @@
             $Dob = $_POST['aN'];
             $id = $_POST['id'];
             $logIn = connexion(SERVEUR, UTILISATEUR, MOTDEPASSE, BASEDEDONNEES);
-            $sql = 'UPDATE auteur SET nom=?, prenom=?, date_naissance=? auteur WHERE id_auteur=?';
+            $sql = 'UPDATE auteur SET nom=?, prenom=?, date_naissance=? WHERE id_auteur=?';
             $idRequete = executeR($logIn, $sql, array($nom, $prenom, $Dob, $id));
+        
+            Header('Location: ../listeAuteur.php');
+        }elseif (isset($_POST['aModif'])) {
+            Header('Location: ../listeAuteur.php');
         }
-        }
+        
         ?>
         <a href="../listeAuteur.php">Accueil</a>
     </body>
