@@ -10,7 +10,7 @@
             <div id='banner'><h1>LISTE D'AUTEURS</h1></div>
             <br>
             <div class="menuHaut">
-                <a href="control/formAjout.php">Ajouter un auteur à la liste</a>
+                <a id="ajout" href="control/formAjout.php">Ajouter un auteur à la liste</a>
                 <form method="POST" action="control/formRech">
                     <input id="cRech" type="text" name="objRech" placeholder="Rechercher">
                     <input type="submit" name="goRech" value="->">

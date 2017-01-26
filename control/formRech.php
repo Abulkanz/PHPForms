@@ -13,23 +13,20 @@
         $logIn = connexion(SERVEUR, UTILISATEUR, MOTDEPASSE, BASEDEDONNEES);
 
         if (isset($_POST['goRech'])) {
-            $objetRech = "%".$_POST['objRech']."%";
-           
+            $objetRech = "%" . $_POST['objRech'] . "%";
+
             $sql = 'SELECT * FROM auteur WHERE nom LIKE ? OR prenom LIKE ?';
             $idRequete = executeR($logIn, $sql, array($objetRech, $objetRech));
-            
-            echo '<table>';
-            echo '<tr><th>Nom</th><th>Prénom</th><th>Actions</th></tr>';
+
+
+            echo '<table><tr><th>Identifiant</th><th>Nom</th><th>Prénom</th><th>Année de naissance</th></tr>';
             while ($ligne = $idRequete->fetch(PDO::FETCH_ASSOC)) {
-                $idAut = $ligne['id_auteur'];
-                $consult = "<form method='POST' action='control/formConsult.php'><input type='submit' name='bConsult' value='C'><input type='hidden' name='id' value='" . $idAut . "'></form>";
-                $modif = "<form method='POST' action='control/formModif.php'><input type='submit' name='bModif' value='M'><input type='hidden' name='id' value='" . $idAut . "'></form>";
-                $suppr = "<form method='POST' action='control/formSuppr.php'><input type='submit' name='bSuppr' value='S'><input type='hidden' name='id' value='" . $idAut . "'></form>";
-                echo '<tr>' . '<td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $consult, $modif, $suppr . '</td>' . '</tr>';
+                echo '<tr><td>' . $ligne['id_auteur'] . '</td><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $ligne['date_naissance'] . '</td></tr></table>';
             }
             echo '</table>';
         }
-            ?>
+        ?>
+        <a class='lienAcc' href="../listeAuteur.php">Accueil</a>
     </body>
 </html>
 

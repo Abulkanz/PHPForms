@@ -21,6 +21,7 @@ body{
     margin: auto;
     background: white;
     padding-bottom: 1em;
+    color: black;
 }
 
 
@@ -63,6 +64,10 @@ a{
     color: lightblue;
 }
 
+#ajout{
+    margin-left: 1em;
+}
+
 input{
     background-color: darkgrey;
     border-radius: 1em;
@@ -99,14 +104,16 @@ th{
     border:1px solid black;
     border-collapse:collapse;
     background-color:lightblue;
-    font: 1.4em Righteous black;
+    font: 1.4em Righteous;
+    color: black;
 }
 
 td{
     border:1px solid black; 
     border-collapse:collapse;
     text-align: center;
-    font: 1.2em Righteous black;
+    font: 1.2em Righteous;
+    color: black;
 }
 
 td:hover{
