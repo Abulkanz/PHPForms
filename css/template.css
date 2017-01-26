@@ -116,7 +116,7 @@ td{
     color: black;
 }
 
-td:hover{
+tr:hover{
     animation-name: example;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
