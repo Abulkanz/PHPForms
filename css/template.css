@@ -9,14 +9,22 @@
     src: url(../fonts/Righteous-Regular.ttf);
 }
 
+html{
+    margin: 0;
+    font-size: 16px;
+    font-size: 62.5%;
+}
+
+#banner h1{
+    font: 2em Righteous black;
+}
 
 a{
     text-decoration: none;
-    font: 12px Righteous lightblue;
+    font: 1.2em Righteous lightblue;
 }
 
 table{
-
     border:1px solid black;
     border-collapse:collapse;
 }
@@ -26,7 +34,7 @@ table form{
 }
 
 table form input{
-    font: 14px Righteous black;
+    font: 1.4em Righteous black;
     background-color: lightyellow;
 }
 
@@ -34,13 +42,14 @@ th{
     border:1px solid black;
     border-collapse:collapse;
     background-color:lightblue;
-    font: 14px Righteous black;
+    font: 1.4em Righteous black;
 }
 
 td{
     border:1px solid black; 
     border-collapse:collapse;
     text-align: center;
+    font: 1.2em Righteous black;
 }
 
 td:hover{

@@ -11,6 +11,9 @@ and open the template in the editor.
         <link href="css/template.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        <header>
+            <div id='banner'><h1>LISTE D'AUTEURS</h1></div>
+        </header>
         <?php
         require_once 'include/executeRequete.php';
         require_once 'include/connexion.php';

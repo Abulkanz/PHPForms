@@ -18,17 +18,14 @@ and open the template in the editor.
 
         if (isset($_POST['bConsult'])) {
             $id_auteur = $_POST['id'];
-            $consult = "<form method='POST' action='../control/formConsult.php'><input type='submit' name='bConsult' value='C'><input type='hidden' name='id' value='".$id_auteur."'></form>";
-            $modif = "<form method='POST' action='../control/formModif.php'><input type='submit' name='bModif' value='M'><input type='hidden' name='id' value='".$id_auteur."'></form>";
-            $suppr = "<form method='POST' action='../control/formSuppr.php'><input type='submit' name='bSuppr' value='S'><input type='hidden' name='id' value='".$id_auteur."'></form>";
-            
+
             $logIn = connexion(SERVEUR, UTILISATEUR, MOTDEPASSE, BASEDEDONNEES);
-            $sql = 'SELECT id_auteur, nom, prenom FROM auteur WHERE id_auteur='.$id_auteur;
+            $sql = 'SELECT * FROM auteur WHERE id_auteur=' . $id_auteur;
             $idRequete = executeR($logIn, $sql);
             $ligne = $idRequete->fetch(PDO::FETCH_ASSOC);
-            
-                echo '<table><tr><th>Nom</th><th>Prénom</th><th>Actions</th></tr>';
-                echo '<tr><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $consult, $modif, $suppr . '</td></tr></table>';
+
+            echo '<table><tr><th>Identifiant</th><th>Nom</th><th>Prénom</th><th>Année de naissance</th></tr>';
+            echo '<tr><td>' . $ligne['id_auteur'] . '</td><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $ligne['date_naissance'] . '</td></tr></table>';
         }
         ?>
         <a href="../listeAuteur.php">Accueil</a>
