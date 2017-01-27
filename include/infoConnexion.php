@@ -2,6 +2,6 @@
 
 define('SERVEUR', 'localhost');
 define('UTILISATEUR', 'root');
-define('MOTDEPASSE', '');
-define('BASEDEDONNEES', 'bibliotheque');
+define('MOTDEPASSE', 'admin');
+define('BASEDEDONNEES', 'aVbibliotheque');
 ?>

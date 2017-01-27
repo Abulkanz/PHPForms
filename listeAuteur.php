@@ -14,10 +14,17 @@
                 <br>
                 <div class="menuHaut">
                     <a id="ajout" href="control/formAjout.php">Ajouter un auteur à la liste</a>
-                    <form method="POST" action="control/formRech">
+                    <form method="POST" action="control/formRech.php">
                         <input id="cRech" type="text" name="objRech" placeholder="Rechercher">
                         <input type="submit" name="goRech" value="->">
+                        <select name="selection" multiple="multiple">
+                            <option value="nom">Nom</option>
+                            <option value="prenom">Prénom</option>
+                            <option value="date_naissance">Date de naissance</option>
+                        </select>
                     </form>
+                    
+                    
                 </div>
                 <br>
             </header>
