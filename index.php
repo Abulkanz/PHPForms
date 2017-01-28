@@ -18,7 +18,7 @@
                         <input id="cRech" type="text" name="objRech" placeholder="Rechercher">
                         <input type="submit" name="goRech" value="->">
                         <select name="selection">
-                            <option value="nom">Nom</option>
+                            <option selected="selected" value="nom">Nom</option>
                             <option value="prenom">Prénom</option>
                             <option value="date_naissance">Date de naissance</option>
                         </select>
