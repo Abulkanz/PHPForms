@@ -13,11 +13,12 @@
                 <div id='banner'><h1>LISTE D'AUTEURS</h1></div>
                 <br>
                 <div class="menuHaut">
-                    <a id="ajout" href="control/formAjout.php">Ajouter un auteur à la liste</a><br>
-                    <form method="POST" action="control/formRech.php">
+                    <a id="ajout" href="control/formAjout.php">Ajouter un auteur à la liste</a>
+                    <form id="rechTri" method="POST" action="control/formRech.php">
                         <input id="cRech" type="text" name="objRech" placeholder="Rechercher">
                         <input type="submit" name="goRech" value="->">
-                        <select name="selection">
+                        <label for="tri">Trier par</label>
+                        <select id="tri" name="selection">
                             <option selected="selected" value="nom">Nom</option>
                             <option value="prenom">Prénom</option>
                             <option value="date_naissance">Date de naissance</option>

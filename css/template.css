@@ -5,13 +5,18 @@ html{
 }
 
 body{
-    margin: 0;
     background-image: url(../img/fondBiblio-min.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     -moz-background-size: cover;
+}
+
+.aucRes{
+    text-align: center;
+    font-size: 1.4em;
+    color: orange;
 }
 
 .conteneur{
@@ -22,9 +27,8 @@ body{
     padding-bottom: 1em;
     color: black;
     border-radius: 2em 2em 2em 2em;
+    box-shadow: 0 0 3em lightblue;
 }
-
-
 
 #fAjout,
 #fModif,
@@ -53,6 +57,11 @@ h2{
     background-color: white;
     color: black;
 }
+
+#rechTri{
+    display: inline-block;
+}
+
 .menuHaut{
     width: 100%;
     text-align: center;
@@ -85,6 +94,11 @@ input{
     border-radius: 1em;
     font: 1.4em Righteous;
     color: lightblue;
+}
+
+select{
+    border-radius: 1em;
+    font: 1.4em Righteous;
 }
 
 input:hover{

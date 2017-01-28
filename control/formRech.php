@@ -25,7 +25,7 @@
                 $idRequete = executeR($logIn, $sql, array($objetRech, $objetRech, $choix));
                 $ligne = $idRequete->fetch(PDO::FETCH_ASSOC);
                 if ($ligne == NULL) {
-                    echo 'Aucun resultat trouvé';
+                    echo '<p class="aucRes">--La recherche ne fournit aucun resultat--</p>';
                 } else {
 
                     switch ($_POST['selection']) {
