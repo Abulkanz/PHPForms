@@ -31,7 +31,7 @@
                 $idRequete = executeR($logIn, $sql, array($name, $fName, $fDate));
             }
             ?>
-            <a class="lienAcc" href="../listeAuteur.php">Accueil</a>
+            <a class="lienAcc" href="../index.php">Accueil</a>
         </div>
     </body>
 </html>

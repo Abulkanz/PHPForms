@@ -8,7 +8,6 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <link href="../css/template.css" rel="stylesheet" type="text/css"/>
-        <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet"> 
         <title>Consultation</title>
     </head>
     <body>
@@ -34,7 +33,7 @@ and open the template in the editor.
                 echo '<tr><td>' . $ligne['id_auteur'] . '</td><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $ligne['date_naissance'] . '</td></tr></table>';
             }
             ?>
-            <a class='lienAcc' href="../listeAuteur.php">Accueil</a>
+            <a class='lienAcc' href="../index.php">Accueil</a>
         </div>
     </body>
 </html>

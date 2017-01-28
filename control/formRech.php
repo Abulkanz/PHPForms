@@ -29,7 +29,7 @@
                         
                         echo '<table><tr><th>Identifiant</th><th>Nom</th><th>Prénom</th><th>Année de naissance</th></tr>';
                         while ($ligne = $idRequete->fetch(PDO::FETCH_ASSOC)) {
-                            echo '<tr><td>' . $ligne['id_auteur'] . '</td><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $ligne['date_naissance'] . '</td></tr></table>';
+                            echo '<tr><td>' . $ligne['id_auteur'] . '</td><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $ligne['date_naissance'] . '</td></tr>';
                         }
                         echo '</table>';
                     break;
@@ -41,7 +41,7 @@
                         
                         echo '<table><tr><th>Identifiant</th><th>Nom</th><th>Prénom</th><th>Année de naissance</th></tr>';
                         while ($ligne = $idRequete->fetch(PDO::FETCH_ASSOC)) {
-                            echo '<tr><td>' . $ligne['id_auteur'] . '</td><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $ligne['date_naissance'] . '</td></tr></table>';
+                            echo '<tr><td>' . $ligne['id_auteur'] . '</td><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $ligne['date_naissance'] . '</td></tr>';
                         }
                         echo '</table>';
                     break;
@@ -53,7 +53,7 @@
 
                         echo '<table><tr><th>Identifiant</th><th>Nom</th><th>Prénom</th><th>Année de naissance</th></tr>';
                         while ($ligne = $idRequete->fetch(PDO::FETCH_ASSOC)) {
-                            echo '<tr><td>' . $ligne['id_auteur'] . '</td><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $ligne['date_naissance'] . '</td></tr></table>';
+                            echo '<tr><td>' . $ligne['id_auteur'] . '</td><td><em>' . $ligne['nom'] . '</em></td>' . '<td>' . $ligne['prenom'] . '</td>' . '<td>' . $ligne['date_naissance'] . '</td></tr>';
                         }
                         echo '</table>';
                     break;
@@ -71,7 +71,7 @@
                 }
             }
             ?>
-            <a class='lienAcc' href="../listeAuteur.php">Accueil</a>
+            <a class='lienAcc' href="../index.php">Accueil</a>
         </div>
     </body>
 </html>

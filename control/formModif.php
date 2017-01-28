@@ -44,12 +44,12 @@
                 $sql = 'UPDATE auteur SET nom=?, prenom=?, date_naissance=? WHERE id_auteur=?';
                 $idRequete = executeR($logIn, $sql, array($nom, $prenom, $Dob, $id));
 
-                Header('Location: ../listeAuteur.php');
+                Header('Location: ../index.php');
             } elseif (isset($_POST['aModif'])) {
-                Header('Location: ../listeAuteur.php');
+                Header('Location: ../index.php');
             }
             ?>
-            <a class='lienAcc' href="../listeAuteur.php">Accueil</a>
+            <a class='lienAcc' href="../index.php">Accueil</a>
         </div>
     </body>
 </html>

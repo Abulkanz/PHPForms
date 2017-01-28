@@ -13,7 +13,7 @@
                 <div id='banner'><h1>LISTE D'AUTEURS</h1></div>
                 <br>
                 <div class="menuHaut">
-                    <a id="ajout" href="control/formAjout.php">Ajouter un auteur à la liste</a>
+                    <a id="ajout" href="control/formAjout.php">Ajouter un auteur à la liste</a><br>
                     <form method="POST" action="control/formRech.php">
                         <input id="cRech" type="text" name="objRech" placeholder="Rechercher">
                         <input type="submit" name="goRech" value="->">
@@ -23,8 +23,6 @@
                             <option value="date_naissance">Date de naissance</option>
                         </select>
                     </form>
-                    
-                    
                 </div>
                 <br>
             </header>

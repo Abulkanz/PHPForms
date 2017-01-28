@@ -37,12 +37,12 @@
                 $sql = "DELETE FROM auteur WHERE id_auteur=?";
                 $idRequete = executeR($logIn, $sql, array($bidul));
 
-                Header('Location: ../listeAuteur.php');
+                Header('Location: ../index.php');
             } elseif (isset($_POST['aSuppr'])) {
-                Header('Location: ../listeAuteur.php');
+                Header('Location: ../index.php');
             }
             ?>
-            <a class='lienAcc' href="../listeAuteur.php">Accueil</a>
+            <a class='lienAcc' href="../index.php">Accueil</a>
         </div>
     </body>
 </html>
