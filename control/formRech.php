@@ -36,7 +36,7 @@
                     case "prenom":
                         $objetRech = "%" . $_POST['objRech'] . "%";
                         $choix = $_POST['selection'];
-                        $sql = 'SELECT * FROM auteur WHERE nom LIKE '.$objetRech.' OR prenom LIKE '.$objetRech.' ORDER BY '.$choix.'';
+                        $sql = 'SELECT * FROM auteur WHERE nom LIKE "'.$objetRech.'" OR prenom LIKE "'.$objetRech.'" ORDER BY '.$choix.'';
                         $idRequete = executeR($logIn, $sql, array($objetRech, $objetRech, $choix));
                         
                         echo '<table><tr><th>Identifiant</th><th>Nom</th><th>Prénom</th><th>Année de naissance</th></tr>';
@@ -48,7 +48,7 @@
                     case "date_naissance":
                         $objetRech = "%" . $_POST['objRech'] . "%";
                         $choix = $_POST['selection'];
-                        $sql = 'SELECT * FROM auteur WHERE nom LIKE '.$objetRech.' OR prenom LIKE '.$objetRech.' ORDER BY '.$choix.'';
+                        $sql = 'SELECT * FROM auteur WHERE nom LIKE "'.$objetRech.'" OR prenom LIKE "'.$objetRech.'" ORDER BY '.$choix.'';
                         $idRequete = executeR($logIn, $sql, array($objetRech, $objetRech, $choix));;
 
                         echo '<table><tr><th>Identifiant</th><th>Nom</th><th>Prénom</th><th>Année de naissance</th></tr>';
